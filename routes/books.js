@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
     });
 
     Member.findOne({ name: req.body.memberName }, function (err, member) {
-        member.bookList.push(book);
+        member.bookList.push(book.title);
         member.save();
     });
 

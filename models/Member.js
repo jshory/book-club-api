@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 const MemberSchema = Schema({
     name: { type: String, unique: true },
-    bookList: [{ type: Schema.Types.ObjectId, ref: 'Book' }],
+    bookList: [{ type: String, unique: true }]
 });
 
 module.exports = mongoose.model('Member', MemberSchema);
